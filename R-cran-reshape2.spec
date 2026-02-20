@@ -3,7 +3,7 @@
 Summary:	Flexibly reshape data: a reboot of the reshape package
 Name:		R-cran-%{modulename}
 Version:	1.2.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Math
 Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
