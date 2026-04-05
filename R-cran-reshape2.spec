@@ -2,18 +2,24 @@
 %define		modulename	reshape2
 Summary:	Flexibly reshape data: a reboot of the reshape package
 Name:		R-cran-%{modulename}
-Version:	1.2.2
-Release:	2
-License:	GPL v2
+Version:	1.4.5
+Release:	1
+License:	MIT
 Group:		Applications/Math
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
-# Source0-md5:	4b13c53b2a184c0498b351608ff8a085
-URL:		http://cran.fhcrc.org/web/packages/reshape2/index.html
-BuildRequires:	R >= 2.8.1
-Requires(post,postun):	R >= 2.8.1
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
+# Source0-md5:	2b99f857c715d1ebca9416e8b4dd51c2
+URL:		https://github.com/hadley/reshape
+BuildRequires:	R >= 3.1
+BuildRequires:	R-cran-plyr >= 1.8.1
+BuildRequires:	R-cran-Rcpp
+BuildRequires:	R-cran-stringr
+Requires(post,postun):	R >= 3.1
 Requires(post,postun):	perl-base
 Requires(post,postun):	textutils
 Requires:	R
+Requires:	R-cran-plyr >= 1.8.1
+Requires:	R-cran-Rcpp
+Requires:	R-cran-stringr
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
